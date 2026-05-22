@@ -1,0 +1,28 @@
+.projectPage {
+  min-height: calc(100svh - var(--header-height));
+  padding: clamp(4rem, 12vh, 8rem) clamp(1.25rem, 4vw, 3rem);
+}
+
+.projectPageInner {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.projectPageTitle {
+  margin: 0 0 1rem;
+  font-family: var(--font-logo);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.projectPageLead {
+  margin: 0;
+  max-width: 36rem;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}

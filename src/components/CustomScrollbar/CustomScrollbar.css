@@ -1,0 +1,39 @@
+.customScrollbar {
+  position: fixed;
+  right: 12px;
+  top: 50%;
+  z-index: 90;
+  display: flex;
+  justify-content: flex-end;
+  width: 10px;
+  transform: translateY(-50%);
+  pointer-events: auto;
+}
+
+.customScrollbarTrack {
+  position: relative;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  transition: width 200ms ease;
+}
+
+.customScrollbarThumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  background: var(--accent);
+  border-radius: 0;
+  transition: width 200ms ease;
+}
+
+.customScrollbar:hover .customScrollbarTrack,
+.customScrollbar:hover .customScrollbarThumb {
+  width: 2px;
+}
+
+@media (max-width: 720px) {
+  .customScrollbar {
+    display: none;
+  }
+}

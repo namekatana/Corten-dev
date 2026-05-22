@@ -1,0 +1,7 @@
+.pageTransitionOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: var(--accent);
+  pointer-events: none;
+}

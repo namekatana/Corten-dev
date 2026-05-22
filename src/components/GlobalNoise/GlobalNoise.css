@@ -1,0 +1,11 @@
+.globalNoise {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url('/noise.svg');
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  opacity: 0.025;
+  mix-blend-mode: overlay;
+}
