@@ -1,0 +1,38 @@
+.btnFilled {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 1.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--bg);
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sharp);
+  transition: var(--transition-cta);
+  white-space: nowrap;
+}
+
+.btnFilled:hover {
+  filter: brightness(1.08);
+}
+
+.btnOutline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 1.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sharp);
+  transition: var(--transition-cta);
+  white-space: nowrap;
+}
+
+.btnOutline:hover {
+  background: var(--accent);
+  color: var(--bg);
+}

@@ -1,0 +1,16 @@
+:root {
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --border: #1f1f1f;
+  --text: #e8e8e8;
+  --muted: #555555;
+  --accent: #c8a882;
+  --accent-dim: #c8a88222;
+  --font-logo: 'Syne', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --header-height: 56px;
+  --radius-sharp: 2px;
+  --transition-nav: color 200ms ease;
+  --transition-cta: background-color 200ms ease, color 200ms ease;
+}
