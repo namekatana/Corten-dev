@@ -1,0 +1,26 @@
+.customCursorDot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  border-radius: 50%;
+  background: var(--accent);
+  pointer-events: none;
+  transition: width 220ms ease, height 220ms ease, margin 220ms ease, opacity 220ms ease;
+  will-change: transform, width, height;
+}
+
+.customCursorDotHover {
+  width: 24px;
+  height: 24px;
+  margin: -12px 0 0 -12px;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .customCursorDot {
+    display: none;
+  }
+}

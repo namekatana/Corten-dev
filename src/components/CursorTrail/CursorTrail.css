@@ -1,0 +1,10 @@
+.cursorTrailDot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: var(--accent);
+  pointer-events: none;
+  z-index: 9998;
+  will-change: transform;
+}
