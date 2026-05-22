@@ -1,0 +1,24 @@
+.heroSideLabelWrap {
+  position: absolute;
+  right: clamp(1.25rem, 4vw, 3rem);
+  bottom: clamp(2rem, 6vh, 4rem);
+  z-index: 1;
+}
+
+.heroSideLabel {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--muted);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+@media (max-width: 720px) {
+  .heroSideLabelWrap {
+    display: none;
+  }
+}

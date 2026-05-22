@@ -1,0 +1,76 @@
+.heroVisual {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  width: min(400px, 38vw);
+  height: min(400px, 38vw);
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heroVisualDots {
+  position: absolute;
+  inset: -12%;
+  background-image: radial-gradient(
+    circle,
+    rgba(200, 168, 130, 0.06) 2px,
+    transparent 2px
+  );
+  background-size: 22px 22px;
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 20%, transparent 72%);
+}
+
+.heroVisualRing {
+  position: absolute;
+  border: 1px solid rgba(200, 168, 130, 0.08);
+  border-radius: 50%;
+}
+
+.heroVisualRingOuter {
+  inset: 0;
+  animation: heroSpin 36s linear infinite;
+}
+
+.heroVisualRingMid {
+  inset: 18%;
+  animation: heroSpinReverse 28s linear infinite;
+}
+
+.heroVisualRingInner {
+  inset: 36%;
+  animation: heroSpin 22s linear infinite;
+}
+
+@keyframes heroSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes heroSpinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .heroVisual {
+    right: 4%;
+    width: min(280px, 55vw);
+    height: min(280px, 55vw);
+    opacity: 0.55;
+  }
+}
+
+@media (max-width: 720px) {
+  .heroVisual {
+    display: none;
+  }
+}

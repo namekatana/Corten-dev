@@ -1,0 +1,40 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  overflow: hidden;
+  will-change: transform;
+}
+
+.preloaderDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.preloaderLine {
+  width: 120px;
+  height: 1px;
+  background: var(--accent);
+  transform-origin: center center;
+}
+
+.preloaderLetters {
+  display: flex;
+  align-items: center;
+  gap: 0.06em;
+  font-family: var(--font-logo);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+
+.preloaderLetter {
+  display: inline-block;
+}

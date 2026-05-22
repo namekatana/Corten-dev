@@ -1,0 +1,37 @@
+.heroStats {
+  display: flex;
+  gap: clamp(1.5rem, 4vw, 2.75rem);
+}
+
+.heroStat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 4.25rem;
+}
+
+.heroStatValue {
+  font-family: var(--font-mono);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.heroStatLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+@media (max-width: 720px) {
+  .heroStats {
+    gap: 1.25rem;
+  }
+
+  .heroStat {
+    min-width: 3.5rem;
+  }
+}

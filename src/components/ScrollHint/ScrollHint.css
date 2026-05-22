@@ -1,0 +1,18 @@
+.scrollHint {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(1.25rem, 4vh, 2.5rem);
+  transform: translateX(-50%);
+  color: var(--muted);
+  transition: color 200ms ease;
+}
+
+.scrollHint:hover {
+  color: var(--text);
+}
+
+.scrollHintArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

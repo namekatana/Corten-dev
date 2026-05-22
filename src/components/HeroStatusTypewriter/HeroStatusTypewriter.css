@@ -1,0 +1,32 @@
+.heroStatusTypewriter {
+  position: absolute;
+  top: calc(var(--header-height) + 1.25rem);
+  left: clamp(1.25rem, 4vw, 3rem);
+  margin: 0;
+  min-height: 1.25em;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  z-index: 1;
+}
+
+.heroStatusCursor {
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  background: var(--accent);
+  animation: heroStatusBlink 0.75s step-end infinite;
+}
+
+.heroStatusCursorHidden {
+  display: none;
+}
+
+@keyframes heroStatusBlink {
+  50% {
+    opacity: 0;
+  }
+}
