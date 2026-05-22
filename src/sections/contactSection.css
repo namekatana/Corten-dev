@@ -1,0 +1,89 @@
+.contactBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding: clamp(2rem, 6vh, 4rem) 0;
+}
+
+.contactTitle {
+  margin: 0;
+  max-width: 16ch;
+  font-family: var(--font-logo);
+  font-weight: 700;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.contactSub {
+  margin: 1.25rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.contactAction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: clamp(2rem, 5vh, 2.75rem);
+}
+
+.contactCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: 16px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--bg);
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sharp);
+  transition: var(--transition-cta);
+}
+
+.contactCta:hover {
+  filter: brightness(1.08);
+}
+
+.contactFind {
+  margin: 1.25rem 0 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.contactSocial {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 0.75rem;
+  margin: 0;
+}
+
+.contactSocialLink {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--muted);
+  transition: var(--transition-nav);
+}
+
+.contactSocialLink:hover {
+  color: var(--text);
+}
+
+.contactSocialSep {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--muted);
+  user-select: none;
+}

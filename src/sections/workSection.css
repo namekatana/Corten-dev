@@ -1,0 +1,25 @@
+.workGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(0.875rem, 1.5vw, 1.25rem);
+}
+
+.workGridLarge {
+  grid-column: span 7;
+}
+
+.workGridSmall {
+  grid-column: span 5;
+}
+
+.workGridWide {
+  grid-column: span 12;
+}
+
+@media (max-width: 900px) {
+  .workGridLarge,
+  .workGridSmall,
+  .workGridWide {
+    grid-column: span 12;
+  }
+}

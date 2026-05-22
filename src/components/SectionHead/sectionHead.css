@@ -1,0 +1,23 @@
+.sectionHead {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: clamp(2rem, 5vh, 3rem);
+}
+
+.sectionHeadTitle {
+  font-family: var(--font-logo);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.sectionHeadLine {
+  display: block;
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+  transform-origin: left center;
+}

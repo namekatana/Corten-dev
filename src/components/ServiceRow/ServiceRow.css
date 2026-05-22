@@ -1,0 +1,62 @@
+.serviceRow {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr) minmax(0, 1.35fr);
+  align-items: baseline;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+  padding: 1.25rem 0 1.25rem 1rem;
+  border-bottom: 1px solid var(--border);
+  border-left: 2px solid transparent;
+  transition:
+    border-left-color 200ms ease,
+    background-color 200ms ease;
+}
+
+.serviceRow:hover,
+.serviceRow:focus-within {
+  border-left-color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.serviceRowIndex {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.serviceRowTitle {
+  font-family: var(--font-logo);
+  font-weight: 700;
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.serviceRowDesc {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
+  text-align: right;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .serviceRow {
+    grid-template-columns: 3rem minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .serviceRow {
+    grid-template-columns: 3rem 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.35rem 1rem;
+  }
+
+  .serviceRowDesc {
+    grid-column: 2;
+    text-align: left;
+  }
+}
