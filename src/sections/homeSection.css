@@ -62,6 +62,11 @@
   margin-top: 2rem;
 }
 
+.heroCtaPrimary,
+.heroCtaSecondary {
+  min-width: 9.5rem;
+}
+
 .heroStatsWrap {
   position: absolute;
   right: clamp(3.5rem, 7vw, 5.5rem);

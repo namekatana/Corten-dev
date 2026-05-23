@@ -1,4 +1,6 @@
 import { motion } from 'motion/react'
+import { useTranslation } from 'react-i18next'
+import { AnimatedText } from '../components/AnimatedText/AnimatedText'
 import { HeroGlow } from '../components/HeroGlow/HeroGlow'
 import { HeroShipLine } from '../components/HeroShipLine/HeroShipLine'
 import { HeroSideLabel } from '../components/HeroSideLabel/HeroSideLabel'
@@ -15,6 +17,7 @@ const hidden = { opacity: 0 }
 const shown = { opacity: 1 }
 
 export function HomeSection() {
+  const { t } = useTranslation()
   const heroPlay = useHeroEntrance()
 
   return (
@@ -31,7 +34,7 @@ export function HomeSection() {
             animate={heroPlay ? { y: 0, opacity: 1 } : { y: 60, opacity: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: expoOut }}
           >
-            I build
+            <AnimatedText text={t('hero.line1')} />
           </motion.span>
           <motion.span
             className="heroTitleLine"
@@ -39,7 +42,7 @@ export function HomeSection() {
             animate={heroPlay ? { y: 0, opacity: 1 } : { y: 60, opacity: 0 }}
             transition={{ duration: 0.7, delay: 0.22, ease: expoOut }}
           >
-            web products
+            <AnimatedText text={t('hero.line2')} />
           </motion.span>
           <motion.span
             className="heroTitleLine"
@@ -47,7 +50,10 @@ export function HomeSection() {
             animate={heroPlay ? { y: 0, opacity: 1 } : { y: 60, opacity: 0 }}
             transition={{ duration: 0.7, delay: 0.34, ease: expoOut }}
           >
-            that <span className="heroTitleAccent">work.</span>
+            <AnimatedText text={`${t('hero.line3')} `} />
+            <span className="heroTitleAccent">
+              <AnimatedText text={t('hero.accent')} />
+            </span>
           </motion.span>
         </h1>
         <motion.p
@@ -56,7 +62,7 @@ export function HomeSection() {
           animate={heroPlay ? shown : hidden}
           transition={{ duration: 0.55, delay: 0.5, ease: expoOut }}
         >
-          React · TypeScript · FastAPI · AI integrations
+          <AnimatedText text={t('hero.stack')} />
         </motion.p>
         <motion.div
           initial={hidden}
@@ -73,11 +79,11 @@ export function HomeSection() {
           }
           transition={{ duration: 0.5, delay: 0.65, ease: expoOut }}
         >
-          <MagneticButton href="#work" className="btnFilled">
-            See my work
+          <MagneticButton href="#work" className="btnFilled heroCtaPrimary">
+            <AnimatedText text={t('hero.ctaPrimary')} />
           </MagneticButton>
-          <MagneticButton href="#contact" className="btnOutline">
-            Get in touch
+          <MagneticButton href="#contact" className="btnOutline heroCtaSecondary">
+            <AnimatedText text={t('hero.ctaSecondary')} />
           </MagneticButton>
         </motion.div>
       </div>

@@ -1,15 +1,19 @@
-import { aboutPoints } from '../../config/about'
+import { useTranslation } from 'react-i18next'
+import { aboutPointKeys } from '../../config/about'
+import { AnimatedText } from '../AnimatedText/AnimatedText'
 import './AboutPoints.css'
 
 export function AboutPoints() {
+  const { t } = useTranslation()
+
   return (
     <ul className="aboutPoints">
-      {aboutPoints.map((point) => (
-        <li key={point} className="aboutPoint">
+      {aboutPointKeys.map((key) => (
+        <li key={key} className="aboutPoint">
           <span className="aboutPointMark" aria-hidden="true">
             →
           </span>
-          {point}
+          <AnimatedText text={t(key)} />
         </li>
       ))}
     </ul>

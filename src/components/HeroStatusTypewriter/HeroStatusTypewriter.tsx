@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import './HeroStatusTypewriter.css'
 
-const statusText = 'Available for projects · 2026'
 const charDelayMs = 42
 
 type HeroStatusTypewriterProps = {
@@ -9,6 +9,8 @@ type HeroStatusTypewriterProps = {
 }
 
 export function HeroStatusTypewriter({ active }: HeroStatusTypewriterProps) {
+  const { t, i18n } = useTranslation()
+  const statusText = t('hero.status')
   const [display, setDisplay] = useState('')
   const [typingDone, setTypingDone] = useState(false)
   const [cursorVisible, setCursorVisible] = useState(false)
@@ -36,7 +38,7 @@ export function HeroStatusTypewriter({ active }: HeroStatusTypewriterProps) {
     }, charDelayMs)
 
     return () => window.clearInterval(typeTimer)
-  }, [active])
+  }, [active, statusText, i18n.language])
 
   useEffect(() => {
     if (!typingDone) {

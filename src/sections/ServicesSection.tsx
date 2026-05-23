@@ -1,7 +1,9 @@
 import { motion } from 'motion/react'
+import { useTranslation } from 'react-i18next'
+import { AnimatedText } from '../components/AnimatedText/AnimatedText'
 import { SectionHead } from '../components/SectionHead/SectionHead'
 import { ServiceRow } from '../components/ServiceRow/ServiceRow'
-import { serviceAsideLines, serviceItems } from '../config/services'
+import { serviceAsideKeys, serviceItems } from '../config/services'
 import { SectionShell } from './SectionShell'
 import './servicesSection.css'
 
@@ -15,9 +17,11 @@ const tableVariants = {
 }
 
 export function ServicesSection() {
+  const { t } = useTranslation()
+
   return (
     <SectionShell id="services">
-      <SectionHead title="What I do" />
+      <SectionHead title={t('services.title')} />
       <div className="servicesLayout">
         <motion.div
           className="servicesTable"
@@ -27,16 +31,16 @@ export function ServicesSection() {
           viewport={{ once: true, amount: 0.15 }}
         >
           {serviceItems.map((item) => (
-            <ServiceRow key={item.index} item={item} />
+            <ServiceRow key={item.key} item={item} />
           ))}
         </motion.div>
         <aside className="servicesAside" aria-label="Availability">
-          {serviceAsideLines.map((line) => (
-            <p key={line} className="servicesAsideLine">
+          {serviceAsideKeys.map((key) => (
+            <p key={key} className="servicesAsideLine">
               <span className="servicesAsideDot" aria-hidden="true">
                 ·
               </span>
-              {line}
+              <AnimatedText text={t(key)} />
             </p>
           ))}
         </aside>

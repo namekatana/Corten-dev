@@ -1,12 +1,15 @@
+import { useTranslation } from 'react-i18next'
 import './Footer.css'
 
 export function Footer() {
+  const { t } = useTranslation()
+
   return (
     <footer className="footer">
       <div className="footerInner">
-        <span className="footerBrand">CORTEN</span>
+        <span className="footerBrand">{t('footer.brand')}</span>
         {' '}
-        © 2026
+        {t('footer.year')}
       </div>
     </footer>
   )

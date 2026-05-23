@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'motion/react'
+import { AnimatedText } from '../AnimatedText/AnimatedText'
 import { revealEase } from '../../config/motionEase'
 import './sectionHead.css'
 
@@ -23,7 +24,7 @@ export function SectionHead({ title }: SectionHeadProps) {
         }
         transition={{ duration: 0.7, ease: revealEase }}
       >
-        {title}
+        <AnimatedText text={title} />
       </motion.span>
       <motion.span
         className="sectionHeadLine"
@@ -58,7 +59,7 @@ export function RevealBlockTitle({ title, className }: RevealBlockTitleProps) {
       }
       transition={{ duration: 0.7, ease: revealEase }}
     >
-      {title}
+      <AnimatedText text={title} />
     </motion.h2>
   )
 }

@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { useTranslation } from 'react-i18next'
 import { ProjectCard } from '../components/ProjectCard/ProjectCard'
 import { SectionHead } from '../components/SectionHead/SectionHead'
 import { projects } from '../config/projects'
@@ -38,9 +39,11 @@ const cardVariants = {
 }
 
 export function WorkSection() {
+  const { t } = useTranslation()
+
   return (
     <SectionShell id="work">
-      <SectionHead title="Selected work" />
+      <SectionHead title={t('work.title')} />
       <motion.div
         className="workGrid"
         variants={gridVariants}

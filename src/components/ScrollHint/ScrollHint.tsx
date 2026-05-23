@@ -1,15 +1,17 @@
 import { motion } from 'motion/react'
+import { useTranslation } from 'react-i18next'
 import { useFirstScroll } from '../../hooks/useFirstScroll'
 import './ScrollHint.css'
 
 export function ScrollHint() {
+  const { t } = useTranslation()
   const scrolled = useFirstScroll()
 
   return (
     <motion.a
       href="#about"
       className="scrollHint"
-      aria-label="Scroll down"
+      aria-label={t('hero.scrollAria')}
       initial={{ opacity: 0 }}
       animate={{ opacity: scrolled ? 0 : 1 }}
       transition={{ duration: 0.35 }}

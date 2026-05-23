@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { useTranslation } from 'react-i18next'
 import { ProcessStep } from '../components/ProcessStep/ProcessStep'
 import { SectionHead } from '../components/SectionHead/SectionHead'
 import { processSteps } from '../config/process'
@@ -16,9 +17,11 @@ const listVariants = {
 }
 
 export function ProcessSection() {
+  const { t } = useTranslation()
+
   return (
     <SectionShell id="process" className="processSection">
-      <SectionHead title="Process" />
+      <SectionHead title={t('process.title')} />
       <motion.ol
         className="processGrid"
         variants={listVariants}
@@ -27,7 +30,7 @@ export function ProcessSection() {
         viewport={{ once: true, amount: 0.2 }}
       >
         {processSteps.map((step) => (
-          <ProcessStep key={step.index} step={step} />
+          <ProcessStep key={step.key} step={step} />
         ))}
       </motion.ol>
     </SectionShell>

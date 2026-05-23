@@ -1,23 +1,31 @@
 import { Fragment } from 'react'
+import { useTranslation } from 'react-i18next'
+import { AnimatedText } from '../components/AnimatedText/AnimatedText'
 import { MagneticButton } from '../components/MagneticButton/MagneticButton'
 import { contactPrimary, contactSocial } from '../config/contact'
 import { SectionShell } from './SectionShell'
 import './contactSection.css'
 
 export function ContactSection() {
+  const { t } = useTranslation()
+
   return (
     <SectionShell id="contact">
       <div className="contactBlock">
-        <h2 className="contactTitle">Have a project in mind?</h2>
+        <h2 className="contactTitle">
+          <AnimatedText text={t('contact.title')} as="span" />
+        </h2>
         <p className="contactSub">
-          Let&apos;s figure out if we&apos;re a good fit.
+          <AnimatedText text={t('contact.sub')} as="span" />
         </p>
         <div className="contactAction">
           <MagneticButton href={contactPrimary.href} className="contactCta">
-            {contactPrimary.label}
+            <AnimatedText text={t('contact.cta')} />
           </MagneticButton>
-          <p className="contactFind">or find me on</p>
-          <nav className="contactSocial" aria-label="Social links">
+          <p className="contactFind">
+            <AnimatedText text={t('contact.find')} as="span" />
+          </p>
+          <nav className="contactSocial" aria-label={t('contact.socialAria')}>
             {contactSocial.map((link, index) => (
               <Fragment key={link.label}>
                 {index > 0 ? (

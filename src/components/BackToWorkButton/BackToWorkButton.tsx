@@ -1,10 +1,13 @@
 import { animate } from 'motion'
 import { useRef, type MouseEvent } from 'react'
+import { useTranslation } from 'react-i18next'
+import { AnimatedText } from '../AnimatedText/AnimatedText'
 import { usePageTransition } from '../../context/TransitionContext'
 import { useFinePointer } from '../../hooks/useFinePointer'
 import './BackToWorkButton.css'
 
 export function BackToWorkButton() {
+  const { t } = useTranslation()
   const ref = useRef<HTMLButtonElement>(null)
   const { navigate } = usePageTransition()
   const finePointer = useFinePointer()
@@ -44,7 +47,7 @@ export function BackToWorkButton() {
       <span className="backToWorkArrow" aria-hidden="true">
         ←
       </span>
-      Back to work
+      <AnimatedText text={t('projects.back')} />
     </button>
   )
 }

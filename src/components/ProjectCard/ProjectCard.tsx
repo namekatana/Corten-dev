@@ -1,6 +1,8 @@
 import { motion } from 'motion/react'
+import { useTranslation } from 'react-i18next'
 import type { Project, ProjectAccentShape, ProjectPattern } from '../../config/projects'
 import { usePageTransition } from '../../context/TransitionContext'
+import { AnimatedText } from '../AnimatedText/AnimatedText'
 import { ProjectCardBorder } from './ProjectCardBorder'
 import { ProjectTitle } from '../ProjectTitle/ProjectTitle'
 import './ProjectCard.css'
@@ -24,6 +26,7 @@ type ProjectCardProps = {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const { t } = useTranslation()
   const { navigate } = usePageTransition()
   const sizeClass =
     project.size === 'large'
@@ -80,16 +83,26 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <h3 className="projectCardName">
           <ProjectTitle projectId={project.id} title={project.title} />
         </h3>
-        <p className="projectCardDesc">{project.description}</p>
+        <p className="projectCardDesc">
+          <AnimatedText
+            text={t(`projects.${project.id}.description`)}
+            as="span"
+          />
+        </p>
         <p className="projectCardOutcome">
           <span className="projectCardOutcomeArrow" aria-hidden="true">
             ↑
           </span>
-          {project.outcome}
+          <AnimatedText
+            text={t(`projects.${project.id}.outcome`)}
+            as="span"
+          />
         </p>
         <div className="projectCardFoot">
           <span className="projectCardYear">{project.year}</span>
-          <span className="projectCardView">→ View</span>
+          <span className="projectCardView">
+            → <AnimatedText text={t('work.view')} />
+          </span>
         </div>
       </div>
     </motion.article>

@@ -1,5 +1,7 @@
 import { motion } from 'motion/react'
+import { useTranslation } from 'react-i18next'
 import type { ProcessStep as ProcessStepData } from '../../config/process'
+import { AnimatedText } from '../AnimatedText/AnimatedText'
 import { expoOut } from '../../config/motionEase'
 import './ProcessStep.css'
 
@@ -17,14 +19,20 @@ type ProcessStepProps = {
 }
 
 export function ProcessStep({ step }: ProcessStepProps) {
+  const { t } = useTranslation()
+
   return (
     <motion.li className="processStep" variants={stepVariants}>
       <div className="processStepHead">
         <span className="processStepIndex">{step.index}</span>
-        <span className="processStepTitle">{step.title}</span>
+        <span className="processStepTitle">
+          <AnimatedText text={t(`process.steps.${step.key}.title`)} />
+        </span>
       </div>
       <span className="processStepRule" aria-hidden="true" />
-      <p className="processStepBody">{step.body}</p>
+      <p className="processStepBody">
+        <AnimatedText text={t(`process.steps.${step.key}.body`)} as="span" />
+      </p>
     </motion.li>
   )
 }
