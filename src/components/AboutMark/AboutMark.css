@@ -1,0 +1,42 @@
+.aboutMark {
+  position: relative;
+  flex-shrink: 0;
+  width: clamp(7rem, 14vw, 9.5rem);
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 1.75rem),
+    calc(100% - 1.75rem) 100%,
+    0 100%
+  );
+}
+
+.aboutMark::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    transparent 62%,
+    var(--accent-dim) 100%
+  );
+  pointer-events: none;
+}
+
+.aboutMarkLetter {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-logo);
+  font-weight: 800;
+  font-size: clamp(2.5rem, 5vw, 3.25rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--accent);
+  user-select: none;
+}

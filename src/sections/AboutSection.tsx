@@ -1,3 +1,4 @@
+import { AboutMark } from '../components/AboutMark/AboutMark'
 import { AboutPoints } from '../components/AboutPoints/AboutPoints'
 import { RevealBlockTitle } from '../components/SectionHead/SectionHead'
 import { StackList } from '../components/StackList/StackList'
@@ -9,6 +10,7 @@ export function AboutSection() {
   return (
     <SectionShell id="about" className="altSection">
       <div className="aboutLayout">
+        <AboutMark />
         <div className="aboutText">
           <RevealBlockTitle title="About" className="aboutTitle" />
           <AboutPoints />
