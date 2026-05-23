@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'
 import { HeroGlow } from '../components/HeroGlow/HeroGlow'
+import { HeroShipLine } from '../components/HeroShipLine/HeroShipLine'
 import { HeroSideLabel } from '../components/HeroSideLabel/HeroSideLabel'
 import { HeroStats } from '../components/HeroStats/HeroStats'
 import { HeroStatusTypewriter } from '../components/HeroStatusTypewriter/HeroStatusTypewriter'
@@ -57,6 +58,13 @@ export function HomeSection() {
         >
           React · TypeScript · FastAPI · AI integrations
         </motion.p>
+        <motion.div
+          initial={hidden}
+          animate={heroPlay ? shown : hidden}
+          transition={{ duration: 0.55, delay: 0.58, ease: expoOut }}
+        >
+          <HeroShipLine play={heroPlay} />
+        </motion.div>
         <motion.div
           className="heroActions"
           initial={{ opacity: 0, scale: 0.95 }}

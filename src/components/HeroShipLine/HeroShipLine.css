@@ -1,0 +1,15 @@
+.heroShipLine {
+  margin: 1rem 0 0;
+  max-width: 32rem;
+  font-family: var(--font-mono);
+  font-size: clamp(0.75rem, 1.6vw, 0.8125rem);
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+}
+
+.heroShipCount {
+  font-weight: 500;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
