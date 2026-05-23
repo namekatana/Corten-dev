@@ -69,7 +69,7 @@ export function HomeSection() {
           animate={heroPlay ? shown : hidden}
           transition={{ duration: 0.55, delay: 0.58, ease: expoOut }}
         >
-          <HeroShipLine play={heroPlay} />
+          <HeroShipLine />
         </motion.div>
         <motion.div
           className="heroActions"

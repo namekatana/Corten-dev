@@ -1,34 +1,18 @@
 import { useTranslation } from 'react-i18next'
-import { useCountUp } from '../../hooks/useCountUp'
-import { heroShipCounts } from '../../config/heroShip'
+import { AnimatedText } from '../AnimatedText/AnimatedText'
 import './HeroShipLine.css'
 
-type HeroShipLineProps = {
-  play: boolean
-}
-
-export function HeroShipLine({ play }: HeroShipLineProps) {
-  const { t, i18n } = useTranslation()
-  const projects = useCountUp({
-    target: heroShipCounts.projects,
-    play,
-    duration: 1.4,
-  })
-  const clients = useCountUp({
-    target: heroShipCounts.clients,
-    play,
-    duration: 1.4,
-  })
+export function HeroShipLine() {
+  const { t } = useTranslation()
 
   return (
-    <p className="heroShipLine" aria-live="polite" key={i18n.language}>
-      {t('hero.shipBefore')}{' '}
-      <span className="heroShipCount">{projects}</span> {t('hero.shipMid')}{' '}
-      <span className="heroShipCount">
-        {clients}
-        {heroShipCounts.clientSuffix}
-      </span>{' '}
-      {t('hero.shipAfter')}
-    </p>
+    <div className="heroShipLine">
+      <p className="heroShipLineRow">
+        <AnimatedText text={t('hero.shipLine1')} as="span" />
+      </p>
+      <p className="heroShipLineRow">
+        <AnimatedText text={t('hero.shipLine2')} as="span" />
+      </p>
+    </div>
   )
 }

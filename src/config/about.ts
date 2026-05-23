@@ -28,6 +28,6 @@ export const stackGroups: StackGroup[] = [
   },
   {
     key: 'tooling',
-    items: ['Claude API', 'Git', 'Vercel', 'Docker'],
+    items: ['Any LLM API', 'Git', 'Vercel', 'Docker'],
   },
 ]
