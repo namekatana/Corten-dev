@@ -9,7 +9,8 @@ export type ContactLink = {
 }
 
 export const contactSocial: ContactLink[] = [
-  { label: 'GitHub', href: 'https://github.com/' },
-  { label: 'Telegram', href: 'https://t.me/' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/' },
+  { label: 'GitHub', href: 'https://github.com/namekatana' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/vadym-morozov/' },
+  { label: 'X', href: 'https://x.com/realnamekatana' },
+  { label: 'Telegram', href: 'https://t.me/katananame' },
 ]
