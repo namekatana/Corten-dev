@@ -9,8 +9,6 @@ export type Project = {
   size: ProjectSize
   tech: string
   title: string
-  description: string
-  outcome: string
   year: string
   href: string
   image?: string
@@ -24,8 +22,6 @@ export const projects: Project[] = [
     size: 'large',
     tech: 'React · FastAPI',
     title: 'Corten Platform',
-    description: 'Full-stack product shell with auth, billing, and admin.',
-    outcome: 'Launched in 12 days · In production',
     year: '2026',
     href: '#',
     pattern: 'grid',
@@ -36,8 +32,6 @@ export const projects: Project[] = [
     size: 'small',
     tech: 'TypeScript · FastAPI',
     title: 'Signal API',
-    description: 'Realtime metrics gateway for ops dashboards.',
-    outcome: 'Shipped in 3 weeks · 40k events/day',
     year: '2025',
     href: '#',
     pattern: 'dots',
@@ -48,8 +42,6 @@ export const projects: Project[] = [
     size: 'small',
     tech: 'React · OpenAI',
     title: 'Forge AI',
-    description: 'Document workflows with RAG and tool routing.',
-    outcome: 'MVP in 10 days · Used by 3 teams',
     year: '2025',
     href: '#',
     pattern: 'lines',
@@ -60,8 +52,6 @@ export const projects: Project[] = [
     size: 'large',
     tech: 'React · Stripe',
     title: 'Atlas Commerce',
-    description: 'Headless storefront with edge caching and CMS sync.',
-    outcome: 'Live in 5 weeks · Processing orders',
     year: '2024',
     href: '#',
     pattern: 'cross',
@@ -72,8 +62,6 @@ export const projects: Project[] = [
     size: 'wide',
     tech: 'React · Storybook',
     title: 'Mono Design System',
-    description: 'Tokens, primitives, and docs for multi-brand delivery.',
-    outcome: 'Adopted across 4 products · In daily use',
     year: '2024',
     href: '#',
     pattern: 'grid',

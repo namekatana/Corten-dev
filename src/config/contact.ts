@@ -1,5 +1,4 @@
 export const contactPrimary = {
-  label: '→ Write me',
   href: 'mailto:hello@corten.dev',
 }
 

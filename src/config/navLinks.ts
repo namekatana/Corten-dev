@@ -1,11 +1,13 @@
+export type NavLinkKey = 'work' | 'services' | 'about' | 'contact'
+
 export type NavLink = {
-  label: string
+  key: NavLinkKey
   href: string
 }
 
 export const navLinks: NavLink[] = [
-  { label: 'Work', href: '#work' },
-  { label: 'Services', href: '#services' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { key: 'work', href: '#work' },
+  { key: 'services', href: '#services' },
+  { key: 'about', href: '#about' },
+  { key: 'contact', href: '#contact' },
 ]

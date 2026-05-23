@@ -11,6 +11,7 @@ import { ScrollProgress } from './components/ScrollProgress/ScrollProgress'
 import { expoOut } from './config/motionEase'
 import { IntroProvider, useIntro } from './context/IntroContext'
 import { PageTransitionProvider } from './context/TransitionContext'
+import { PageMeta } from './components/PageMeta/PageMeta'
 import { HomePage } from './pages/HomePage'
 import { ProjectPage } from './pages/ProjectPage'
 
@@ -37,6 +38,7 @@ function AppShell() {
       animate={{ opacity: heroReady ? 1 : 0 }}
       transition={{ duration: 0.45, ease: expoOut }}
     >
+      <PageMeta />
       <GlobalNoise />
       <ScrollProgress />
       <CursorTrail />

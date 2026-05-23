@@ -1,5 +1,8 @@
 import { useState, type MouseEvent } from 'react'
 import { motion } from 'motion/react'
+import { useTranslation } from 'react-i18next'
+import { AnimatedText } from '../AnimatedText/AnimatedText'
+import { LangToggle } from '../LangToggle/LangToggle'
 import { MagneticButton } from '../MagneticButton/MagneticButton'
 import { MobileMenu, MenuToggle } from '../MobileMenu/MobileMenu'
 import { useLocation } from 'react-router-dom'
@@ -9,6 +12,7 @@ import { navLinks } from '../../config/navLinks'
 import './Header.css'
 
 export function Header() {
+  const { t } = useTranslation()
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
   const { navigate: transitionNavigate } = usePageTransition()
@@ -46,12 +50,13 @@ export function Header() {
           <nav className="nav" aria-label="Primary">
             {navLinks.map((item) => (
               <a key={item.href} href={item.href} className="navLink">
-                {item.label}
+                <AnimatedText text={t(`nav.${item.key}`)} />
               </a>
             ))}
           </nav>
+          <LangToggle />
           <MagneticButton href="#contact" className="btnOutline headerCta">
-            Let&apos;s talk
+            <AnimatedText text={t('nav.cta')} />
           </MagneticButton>
           <MenuToggle open={menuOpen} onToggle={toggleMenu} />
         </div>

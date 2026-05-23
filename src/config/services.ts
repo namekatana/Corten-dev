@@ -1,34 +1,17 @@
 export type ServiceItem = {
   index: string
-  title: string
-  description: string
+  key: 'ai' | 'web' | 'landing' | 'support'
 }
 
 export const serviceItems: ServiceItem[] = [
-  {
-    index: '01',
-    title: 'AI Integrations',
-    description: 'Any LLM API, chatbots, automation',
-  },
-  {
-    index: '02',
-    title: 'Web Applications',
-    description: 'React · TypeScript · FastAPI backend',
-  },
-  {
-    index: '03',
-    title: 'Landing Pages',
-    description: 'Fast, deployed, no fluff',
-  },
-  {
-    index: '04',
-    title: 'Ongoing support',
-    description: 'Monthly retainer, from $150/mo',
-  },
+  { index: '01', key: 'ai' },
+  { index: '02', key: 'web' },
+  { index: '03', key: 'landing' },
+  { index: '04', key: 'support' },
 ]
 
-export const serviceAsideLines = [
-  'Currently available',
-  'Response within 24h',
-  'Based in Ukraine · Works globally',
-]
+export const serviceAsideKeys = [
+  'services.aside.available',
+  'services.aside.response',
+  'services.aside.location',
+] as const

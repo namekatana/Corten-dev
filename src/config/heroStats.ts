@@ -1,12 +1,12 @@
 export type HeroStat = {
   value: number
   suffix: string
-  label: string
+  labelKey: string
   padLength: number
 }
 
 export const heroStats: HeroStat[] = [
-  { value: 12, suffix: '', label: 'Projects', padLength: 3 },
-  { value: 10, suffix: '+', label: 'Clients', padLength: 3 },
-  { value: 48, suffix: 'h', label: 'Avg. response', padLength: 0 },
+  { value: 12, suffix: '', labelKey: 'hero.stats.projects', padLength: 3 },
+  { value: 10, suffix: '+', labelKey: 'hero.stats.clients', padLength: 3 },
+  { value: 48, suffix: 'h', labelKey: 'hero.stats.response', padLength: 0 },
 ]

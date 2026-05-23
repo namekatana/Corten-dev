@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
+import { useTranslation } from 'react-i18next'
+import { AnimatedText } from '../AnimatedText/AnimatedText'
 import { navLinks } from '../../config/navLinks'
 import './MobileMenu.css'
 
@@ -9,6 +11,8 @@ type MobileMenuProps = {
 }
 
 export function MobileMenu({ open, onClose }: MobileMenuProps) {
+  const { t } = useTranslation()
+
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
     return () => {
@@ -23,7 +27,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           className="menuOverlay"
           role="dialog"
           aria-modal="true"
-          aria-label="Navigation menu"
+          aria-label={t('nav.menuDialog')}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -32,7 +36,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           <div className="menuOverlayNoise" aria-hidden="true" />
           <motion.nav
             className="menuNav"
-            aria-label="Mobile"
+            aria-label={t('nav.mobile')}
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 16 }}
@@ -52,7 +56,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                   ease: [0.22, 1, 0.36, 1],
                 }}
               >
-                {item.label}
+                <AnimatedText text={t(`nav.${item.key}`)} />
               </motion.a>
             ))}
           </motion.nav>
@@ -68,12 +72,14 @@ type MenuToggleProps = {
 }
 
 export function MenuToggle({ open, onToggle }: MenuToggleProps) {
+  const { t } = useTranslation()
+
   return (
     <button
       type="button"
       className="menuToggle"
       aria-expanded={open}
-      aria-label={open ? 'Close menu' : 'Open menu'}
+      aria-label={open ? t('nav.menuClose') : t('nav.menuOpen')}
       onClick={onToggle}
     >
       <motion.span

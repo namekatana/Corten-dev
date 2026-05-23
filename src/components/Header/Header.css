@@ -50,6 +50,7 @@
 
 .headerCta {
   padding: 0.5rem 1.125rem;
+  min-width: 7.5rem;
 }
 
 .headerOpen {
