@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "title": "Corten — Портфоліо",
+    "description": "Corten — веб-продукти, що працюють. React, TypeScript, FastAPI, AI інтеграції.",
+    "ogTitle": "Corten — Розробник",
+    "ogDescription": "Веб-продукти, що працюють. React · TypeScript · FastAPI · AI інтеграції.",
+    "ogImageAlt": "Corten — React, TypeScript, FastAPI, AI інтеграції"
+  },
+  "hero": {
+    "status": "Відкритий до проєктів · 2026",
+    "line1": "Я створюю",
+    "line2": "веб-продукти",
+    "line3": "що",
+    "accent": "працюють.",
+    "stack": "React · TypeScript · FastAPI · AI інтеграції",
+    "shipBefore": "Запустив",
+    "shipMid": "проєктів для",
+    "shipAfter": "клієнтів в Україні та Європі.",
+    "ctaPrimary": "Дивитись роботи",
+    "ctaSecondary": "Написати",
+    "sideLabel": "CORTEN · Розробник",
+    "scrollAria": "Прокрутити вниз",
+    "stats": {
+      "projects": "Проєктів",
+      "clients": "Клієнтів",
+      "response": "Середній відгук"
+    }
+  },
+  "nav": {
+    "work": "Роботи",
+    "services": "Послуги",
+    "about": "Про мене",
+    "contact": "Контакт",
+    "cta": "Поговоримо",
+    "menuOpen": "Відкрити меню",
+    "menuClose": "Закрити меню",
+    "menuDialog": "Меню навігації",
+    "mobile": "Мобільне"
+  },
+  "work": {
+    "title": "Обрані роботи",
+    "view": "Дивитись"
+  },
+  "services": {
+    "title": "Що роблю",
+    "items": {
+      "ai": {
+        "title": "AI інтеграції",
+        "description": "Будь-який LLM API, чат-боти, автоматизація"
+      },
+      "web": {
+        "title": "Веб-додатки",
+        "description": "React · TypeScript · FastAPI бекенд"
+      },
+      "landing": {
+        "title": "Лендінги",
+        "description": "Швидко, задеплоєно, без зайвого"
+      },
+      "support": {
+        "title": "Підтримка",
+        "description": "Щомісячний ретейнер, від $150/міс"
+      }
+    },
+    "aside": {
+      "available": "Зараз доступний",
+      "response": "Відповідь протягом 24 год",
+      "location": "Базуюсь в Україні · Працюю глобально"
+    }
+  },
+  "process": {
+    "title": "Процес",
+    "steps": {
+      "brief": {
+        "title": "Бриф",
+        "body": "Ти описуєш задачу. Я ставлю питання."
+      },
+      "scope": {
+        "title": "Скоуп",
+        "body": "Повертаюсь з ТЗ і ціною за 24 години."
+      },
+      "build": {
+        "title": "Розробка",
+        "body": "Ітерації кожні 2–3 дні. Ти завжди в курсі."
+      },
+      "ship": {
+        "title": "Запуск",
+        "body": "Live в строк. Код залишається твоїм."
+      }
+    }
+  },
+  "about": {
+    "title": "Про мене",
+    "points": {
+      "delivery": "Щотижнева поставка з фіксованим скоупом",
+      "handoff": "Зрозуміна передача для наступного розробника",
+      "contact": "Прямий контакт — без account-менеджерів"
+    },
+    "paragraphs": {
+      "one": "Я створюю веб-продукти — інтерфейси, API і все між ними. Не пітчі, не слайди. Речі, на які реально клікають і платять.",
+      "two": "AI інтеграції — велика частина моєї роботи. Не тому що модно, а тому що хороший бот чи автоматизація економить реальні години, коли бекенд і дані зроблені правильно.",
+      "three": "Моя відмінність — прямота і чіткий скоуп. Поставляю маленькими шматками, тримаю в курсі, залишаю код, який наступна людина прочитає без карти."
+    },
+    "stack": {
+      "frontend": "Фронтенд",
+      "backend": "Бекенд",
+      "tooling": "Інструменти"
+    }
+  },
+  "building": {
+    "title": "Зараз в роботі"
+  },
+  "contact": {
+    "title": "Є ідея проєкту?",
+    "sub": "Давай з'ясуємо, чи підходимо один одному.",
+    "cta": "→ Написати",
+    "find": "або знайди мене на",
+    "socialAria": "Соціальні мережі"
+  },
+  "projects": {
+    "corten-platform": {
+      "description": "Full-stack оболонка продукту з auth, billing та admin.",
+      "outcome": "Запущено за 12 днів · У production"
+    },
+    "signal-api": {
+      "description": "Realtime шлюз метрик для ops-дашбордів.",
+      "outcome": "Запущено за 3 тижні · 40k подій/день"
+    },
+    "forge-ai": {
+      "description": "Документні workflow з RAG і tool routing.",
+      "outcome": "MVP за 10 днів · Використовують 3 команди"
+    },
+    "atlas-commerce": {
+      "description": "Headless вітрина з edge caching і CMS sync.",
+      "outcome": "Live за 5 тижнів · Обробляє замовлення"
+    },
+    "mono-system": {
+      "description": "Токени, примітиви та доки для multi-brand delivery.",
+      "outcome": "Використовується в 4 продуктах · Щодня"
+    },
+    "notFound": "Проєкт не знайдено",
+    "back": "Назад до робіт"
+  },
+  "footer": {
+    "brand": "CORTEN",
+    "year": "© 2026"
+  },
+  "statsAria": "Показники"
+}
