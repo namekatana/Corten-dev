@@ -1,8 +1,6 @@
-import { animate } from 'motion'
-import { useEffect, useState } from 'react'
 import type { HeroStat } from '../../config/heroStats'
 import { heroStats } from '../../config/heroStats'
-import { expoOut } from '../../config/motionEase'
+import { useCountUp } from '../../hooks/useCountUp'
 import './HeroStats.css'
 
 function formatStatValue(value: number, padLength: number, suffix: string) {
@@ -19,22 +17,7 @@ type HeroStatItemProps = {
 }
 
 function HeroStatItem({ stat, play }: HeroStatItemProps) {
-  const [display, setDisplay] = useState(0)
-
-  useEffect(() => {
-    if (!play) {
-      setDisplay(0)
-      return
-    }
-
-    const controls = animate(0, stat.value, {
-      duration: 1.5,
-      ease: expoOut,
-      onUpdate: (latest) => setDisplay(Math.round(latest)),
-    })
-
-    return () => controls.stop()
-  }, [play, stat.value])
+  const display = useCountUp({ target: stat.value, play })
 
   return (
     <div className="heroStat">
