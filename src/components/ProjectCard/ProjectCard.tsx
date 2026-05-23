@@ -81,6 +81,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <ProjectTitle projectId={project.id} title={project.title} />
         </h3>
         <p className="projectCardDesc">{project.description}</p>
+        <p className="projectCardOutcome">
+          <span className="projectCardOutcomeArrow" aria-hidden="true">
+            ↑
+          </span>
+          {project.outcome}
+        </p>
         <div className="projectCardFoot">
           <span className="projectCardYear">{project.year}</span>
           <span className="projectCardView">→ View</span>
